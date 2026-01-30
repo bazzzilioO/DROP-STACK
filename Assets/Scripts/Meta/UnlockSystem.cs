@@ -17,12 +17,30 @@ namespace DropStack.Meta
             {
                 foreach (ModifierConfig modifier in modifiers)
                 {
-                    if (modifier.unlockedByDefault)
-                    {
-                        saveData.unlockedModifiers.Add(modifier.id);
-                    }
+                    saveData.unlockedModifiers.Add(modifier.id);
                 }
+                SaveSystem.Save(saveData);
             }
+        }
+
+        public IEnumerable<string> GetUnlocked()
+        {
+            return saveData.unlockedModifiers.ToList();
+        }
+
+        public bool IsUnlocked(string id)
+        {
+            return saveData.unlockedModifiers.Contains(id);
+        }
+
+        public void Unlock(string id)
+        {
+            if (saveData.unlockedModifiers.Contains(id))
+            {
+                return;
+            }
+            saveData.unlockedModifiers.Add(id);
+            SaveSystem.Save(saveData);
         }
 
         public List<string> GetUnlockedModifiers()

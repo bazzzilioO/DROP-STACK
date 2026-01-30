@@ -3,18 +3,18 @@ using DropStack.Core;
 using DropStack.Meta;
 using DropStack.Modifiers;
 using DropStack.Services;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace DropStack.UI
 {
     public class UIController : MonoBehaviour
     {
         [Header("Text")]
-        [SerializeField] private Text scoreText;
-        [SerializeField] private Text bestText;
-        [SerializeField] private Text currencyText;
-        [SerializeField] private Text toastText;
+        [SerializeField] private TMP_Text scoreText;
+        [SerializeField] private TMP_Text bestText;
+        [SerializeField] private TMP_Text currencyText;
+        [SerializeField] private TMP_Text toastText;
 
         [Header("Views")]
         [SerializeField] private CardChoiceView cardChoiceView;
