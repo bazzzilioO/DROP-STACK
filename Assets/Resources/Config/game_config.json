@@ -1,0 +1,46 @@
+{
+  "tiers": [
+    { "tier": 0, "radius": 0.28, "mass": 0.6, "colorId": 0, "score": 5 },
+    { "tier": 1, "radius": 0.32, "mass": 0.8, "colorId": 1, "score": 10 },
+    { "tier": 2, "radius": 0.36, "mass": 1.0, "colorId": 2, "score": 20 },
+    { "tier": 3, "radius": 0.40, "mass": 1.2, "colorId": 3, "score": 35 },
+    { "tier": 4, "radius": 0.44, "mass": 1.5, "colorId": 4, "score": 55 },
+    { "tier": 5, "radius": 0.50, "mass": 1.8, "colorId": 5, "score": 80 },
+    { "tier": 6, "radius": 0.56, "mass": 2.2, "colorId": 6, "score": 120 },
+    { "tier": 7, "radius": 0.62, "mass": 2.6, "colorId": 7, "score": 160 }
+  ],
+  "spawnWeights": [
+    { "tier": 0, "weight": 45 },
+    { "tier": 1, "weight": 30 },
+    { "tier": 2, "weight": 15 },
+    { "tier": 3, "weight": 10 }
+  ],
+  "modifiers": [
+    { "id": "MAGNET", "displayName": "Magnet", "description": "Attract same tiers", "cost": 50, "unlockedByDefault": true, "value": 8, "duration": 8 },
+    { "id": "ICE", "displayName": "Ice", "description": "Stabilize the cup", "cost": 50, "unlockedByDefault": true, "value": 10, "duration": 10 },
+    { "id": "BOUNCE", "displayName": "Bounce", "description": "Extra bouncy", "cost": 50, "unlockedByDefault": true, "value": 10, "duration": 10 },
+    { "id": "GHOST", "displayName": "Ghost", "description": "Next drop phases", "cost": 75, "unlockedByDefault": false, "value": 2, "duration": 2 },
+    { "id": "DOUBLE_MERGE", "displayName": "Double Merge", "description": "Next merge +2 tiers", "cost": 80, "unlockedByDefault": false, "value": 1, "duration": 0 },
+    { "id": "SHIELD", "displayName": "Shield", "description": "Ignore one overflow", "cost": 60, "unlockedByDefault": true, "value": 1, "duration": 0 },
+    { "id": "SLOW_TIME", "displayName": "Slow Time", "description": "Slow physics", "cost": 70, "unlockedByDefault": false, "value": 0.6, "duration": 5 },
+    { "id": "SNAP", "displayName": "Snap", "description": "Auto align for merges", "cost": 60, "unlockedByDefault": true, "value": 10, "duration": 10 },
+    { "id": "SPLIT", "displayName": "Split", "description": "Split a large tier", "cost": 90, "unlockedByDefault": false, "value": 1, "duration": 0 },
+    { "id": "CLEANSE", "displayName": "Cleanse", "description": "Remove smallest tier", "cost": 60, "unlockedByDefault": true, "value": 1, "duration": 0 },
+    { "id": "BOOST_SCORE", "displayName": "Score Boost", "description": "+25% score", "cost": 80, "unlockedByDefault": false, "value": 1.25, "duration": 20 },
+    { "id": "EXTRA_PICK", "displayName": "Extra Pick", "description": "Next choice has 4 cards", "cost": 75, "unlockedByDefault": false, "value": 1, "duration": 0 }
+  ],
+  "economy": {
+    "dailyRewardCurrency": 50,
+    "missionRewardCurrency": 30,
+    "starterPackPrice": 199,
+    "noAdsPrice": 299,
+    "paletteUnlockPrice": 150
+  },
+  "gameplay": {
+    "mergeVelocityThreshold": 1.5,
+    "scoreForModifierPick": 250,
+    "modifierPickCooldown": 3,
+    "maxTier": 8,
+    "gameOverDelay": 1
+  }
+}
