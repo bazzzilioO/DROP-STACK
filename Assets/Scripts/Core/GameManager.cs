@@ -41,6 +41,16 @@ namespace DropStack.Core
         public bool IsGameOver => isGameOver;
         public ModifierManager Modifiers => modifierManager;
 
+        public void Configure(Spawner spawnerRef, MergeSystem mergeRef, InputController inputRef, GameOverTrigger gameOverRef, UIController uiRef, PixelBackground backgroundRef)
+        {
+            spawner = spawnerRef;
+            mergeSystem = mergeRef;
+            inputController = inputRef;
+            gameOverTrigger = gameOverRef;
+            uiController = uiRef;
+            background = backgroundRef;
+        }
+
         private void Awake()
         {
             ServiceLocator.Initialize();
@@ -54,6 +64,10 @@ namespace DropStack.Core
 
         private void Start()
         {
+            if (!ValidateSceneReferences())
+            {
+                return;
+            }
             runStartTime = Time.time;
             score = 0;
             maxTierReached = 0;
@@ -196,6 +210,42 @@ namespace DropStack.Core
             {
                 uiController.ShowModifierChoices(modifierManager.GetRandomChoices(uiController.ExtraPickCount));
             }
+        }
+
+        private bool ValidateSceneReferences()
+        {
+            bool isValid = true;
+            if (spawner == null)
+            {
+                Debug.LogError("GameManager missing Spawner. Ensure Bootstrapper created it.");
+                isValid = false;
+            }
+            if (mergeSystem == null)
+            {
+                Debug.LogError("GameManager missing MergeSystem. Ensure Bootstrapper created it.");
+                isValid = false;
+            }
+            if (inputController == null)
+            {
+                Debug.LogError("GameManager missing InputController. Ensure Bootstrapper created it.");
+                isValid = false;
+            }
+            if (gameOverTrigger == null)
+            {
+                Debug.LogError("GameManager missing GameOverTrigger. Ensure Bootstrapper created it.");
+                isValid = false;
+            }
+            if (uiController == null)
+            {
+                Debug.LogError("GameManager missing UIController. Ensure Bootstrapper created it.");
+                isValid = false;
+            }
+            if (background == null)
+            {
+                Debug.LogError("GameManager missing PixelBackground. Ensure Bootstrapper created it.");
+                isValid = false;
+            }
+            return isValid;
         }
     }
 }

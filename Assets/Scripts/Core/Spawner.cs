@@ -22,6 +22,13 @@ namespace DropStack.Core
         public int CurrentTier => currentTier;
         public int LastSpawnedTier => lastSpawnedTier;
 
+        public void Configure(Transform spawnPointRef, Transform pieceParentRef, Transform previewAnchorRef)
+        {
+            spawnPoint = spawnPointRef;
+            pieceParent = pieceParentRef;
+            previewAnchor = previewAnchorRef;
+        }
+
         public void Initialize(GameManager manager, ModifierManager modifiers)
         {
             gameManager = manager;
