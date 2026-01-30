@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using DropStack.Meta;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace DropStack.UI
 {
     public class MissionPanel : MonoBehaviour
     {
-        [SerializeField] private List<Text> missionTexts = new List<Text>();
+        [SerializeField] private List<TMP_Text> missionTexts = new List<TMP_Text>();
 
         public void SetMissions(IReadOnlyList<DailyMissionProgress> missions)
         {

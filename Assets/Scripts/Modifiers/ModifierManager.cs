@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DropStack.Core;
+using DropStack.Meta;
 using DropStack.Services;
 using DropStack.Visual;
 using UnityEngine;
@@ -62,7 +63,7 @@ namespace DropStack.Modifiers
 
         public List<ModifierCardData> GetRandomChoices(int extraCount)
         {
-            List<string> available = unlockSystem.GetUnlockedModifiers();
+            List<string> available = unlockSystem.GetUnlocked().ToList();
             int count = 3 + extraCount;
             List<string> picks = available.OrderBy(_ => Random.value).Take(count).ToList();
             return picks.Select(ToCardData).ToList();

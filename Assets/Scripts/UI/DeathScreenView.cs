@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,8 +6,8 @@ namespace DropStack.UI
 {
     public class DeathScreenView : MonoBehaviour
     {
-        [SerializeField] private Text scoreText;
-        [SerializeField] private Text bestText;
+        [SerializeField] private TMP_Text scoreText;
+        [SerializeField] private TMP_Text bestText;
         [SerializeField] private Button continueButton;
 
         private UIController uiController;

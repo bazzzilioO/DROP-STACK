@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using DropStack.Modifiers;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,8 +10,8 @@ namespace DropStack.UI
     {
         [SerializeField] private List<Button> cardButtons = new List<Button>();
         [SerializeField] private List<Image> cardIcons = new List<Image>();
-        [SerializeField] private List<Text> cardTitles = new List<Text>();
-        [SerializeField] private List<Text> cardDescriptions = new List<Text>();
+        [SerializeField] private List<TMP_Text> cardTitles = new List<TMP_Text>();
+        [SerializeField] private List<TMP_Text> cardDescriptions = new List<TMP_Text>();
 
         private UIController uiController;
 
