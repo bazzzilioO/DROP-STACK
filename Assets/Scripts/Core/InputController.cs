@@ -14,6 +14,11 @@ namespace DropStack.Core
         private bool isDragging;
         private Vector3 currentPosition;
 
+        public void Configure(LineRenderer aimLineRef)
+        {
+            aimLine = aimLineRef;
+        }
+
         public void Initialize(GameManager manager, Spawner spawn)
         {
             gameManager = manager;
