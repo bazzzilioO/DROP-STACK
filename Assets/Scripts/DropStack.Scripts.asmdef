@@ -1,0 +1,15 @@
+{
+  "name": "DropStack.Scripts",
+  "references": [
+    "Unity.TextMeshPro",
+    "UnityEngine.UI",
+    "UnityEngine.EventSystems"
+  ],
+  "autoReferenced": true,
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
